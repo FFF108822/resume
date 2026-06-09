@@ -9,14 +9,21 @@
 \begin{document}
 
 \ResumeContacts{
-  邮箱：\ResumeUrl{mailto:z5605012@ad.unsw.edu.au}{z5605012@ad.unsw.edu.au},%
-  电话：+86 15632002968%
+  +86 15632002968,%
+  \ResumeUrl{mailto:z5605012@ad.unsw.edu.au}{z5605012@ad.unsw.edu.au},%
+  籍贯：河北省邯郸市,%
+  2001 年 10 月生,%
+  共青团员%
 }
 
-\begin{tikzpicture}[remember picture, overlay]
-  \node [anchor=north east, inner sep=1cm] at (current page.north east)
-    {\includegraphics[width=2.4cm]{image.png}};
-\end{tikzpicture}
+% 如果想插入照片，请取消此代码的注释。
+% 但是默认不推荐插入照片，因为这不是简历的重点。
+% 如果默认的照片插入格式不能满足你的需求，你可以尝试调整照片的大小，或者使用其他的插入照片的方法。
+% 不然，也可以先渲染 PDF 简历，然后用其他工具在 PDF 上叠加照片。
+% \begin{tikzpicture}[remember picture, overlay]
+%   \node [anchor=north east, inner sep=1cm]  at (current page.north east)
+%      {\includegraphics[width=2cm]{image.png}};
+% \end{tikzpicture}
 
 \ResumeTitle
 \vspace{-0.8em}
@@ -27,29 +34,28 @@
 
 \section{教育背景}
 \ResumeItem
-[澳大利亚新南威尔士大学|计算机科学与技术硕士]
+[澳大利亚新南威尔士大学|硕士研究生]
 {澳大利亚新南威尔士大学（University of New South Wales）}
-[\textnormal{计算机科学与技术硕士（人工智能方向）\quad GPA：84.6/100}]
-[2024.09 -- 至今]
+[\textnormal{计算机科学与技术硕士，人工智能方向}]
+[2024.09—至今]
 
-预计毕业时间：2026 年 8 月。主修课程：计算机网络与应用（89 分）、数据结构与算法（87 分）。
+\textbf{GPA: 84.6/100}，预计毕业时间为\textbf{2026 年 8 月}。主修课程：计算机网络与应用（89 分）、数据结构与算法（87 分）。
+
+主要研究成果为：作为\textbf{第一作者}发表论文《基于局部信息的服务迁移路径选择算法》（计算机应用，2024，44(07):2168--2174），并登记计算机软件著作权《基于深度学习的图像识别系统 V1.0》（登记号：2023SR1150627）。
 
 \ResumeItem
-[云南大学|网络空间安全学士]
+[云南大学|本科生]
 {云南大学（211/双一流大学）}
-[\textnormal{网络空间安全学士\quad GPA：81.7/100}]
-[2019.09 -- 2023.06]
+[\textnormal{网络空间安全学士}]
+[2019.09—2023.06]
 
-主修课程：计算机网络（90 分）、操作系统与安全（90 分）。
-
-荣誉奖项：2019--2020 学年二等奖学金；2020--2021 学年三等奖学金；2021--2022 学年二等奖学金；2023 年度优秀学生论文奖；第八届中国大学生“互联网+”创新创业大赛省级银奖。
+\textbf{GPA: 81.7/100}，主修课程：计算机网络（90 分）、操作系统与安全（90 分）。获学业奖学金多次，2023 年度优秀学生论文奖，第八届中国大学生“互联网+”创新创业大赛省级银奖。
 
 \section{学术成果}
 \begin{itemize}
-  \item \textbf{田润泽}, 周宇龙, 朱洪, 等. 基于局部信息的服务迁移路径选择算法[J]. 计算机应用, 2024, 44(07):2168--2174.
-  \item \textbf{关键词：}服务迁移路径；长短期记忆（LSTM）；神经网络；轨迹预测；道路网络匹配；动态路径规划。
-  \item \textbf{论文状态：}二区第一作者，已发表。
-  \item \textbf{计算机软件著作权：}基于深度学习的图像识别系统 V1.0 \hfill \textbf{登记号：}2023SR1150627
+  \item \textbf{语言}: 熟练掌握 Python, SQL, C, C++, MATLAB；熟悉 HTML, CSS, JavaScript, TypeScript。
+  \item \textbf{工具}: PyTorch, OpenCV, PostgreSQL, Postman, Simulink, AutoCAD, Microsoft Office；熟悉 AI IDEs, n8n, MinerU, Word2Vec。
+  \item \textbf{外语}: 雅思 6.5 分，英语六级，熟练使用英语作为学术研究语言。
 \end{itemize}
 
 \section{科研经历}
@@ -57,9 +63,15 @@
 [项目负责人 | Euler AI | 金融科技项目]
 [2025.06 -- 至今]
 
-\textbf{导师：}新南威尔士大学计算机科学与工程学院 Zhengyi Yang 博士
+\ResumeItem{Euler AI 金融科技项目}
+[项目负责人/企业可比性分析系统]
+[2025.06—至今]
 
-\textbf{任务：}构建从公司财报中自动提取主营业务、进行语义解析和标准化的系统，用于企业间可比性分析。
+\begin{itemize}
+  \item \textbf{负责基于财报语义解析的企业可比性分析系统。}构建从公司财报中自动提取主营业务、进行语义解析和标准化的系统，用于企业间可比性分析。
+  \item 利用 MinerU 实现财报文本结构化抽取，基于 LLM 识别主营业务关键词与语义占比，并通过 Word2Vec、Embedding、LLM 自动匹配统一业务表达。
+  \item 系统实现从财报文本到结构化业务信息的自动化抽取，业务标签对齐准确率达到 87\%，相较传统行业分类提升约 32\%。
+\end{itemize}
 
 \textbf{过程：}
 \begin{enumerate}
@@ -68,31 +80,33 @@
   \item 构建标准化模块，通过关键词对齐与相似度计算（Word2Vec、Embedding、LLM 自动匹配）统一业务表达，并结合行业向量化 clustering 构建企业业务图谱。
 \end{enumerate}
 
-\textbf{成果：}成功实现从财报文本到结构化业务信息的自动化抽取，覆盖主营业务、营收构成和上下游关系。系统输出的业务标签对齐准确率达到 87\%，相较传统行业分类提升约 32\%。
+\ResumeItem{\textbf{基于 Swin-Unet 的无人机图像枯死树分割}}
+[新南威尔士大学计算机视觉项目]
+[2025.05—2025.08]
+\begin{itemize}
+  \item 完成数据标注与切片，构建 RGB+NRG 多光谱融合管线，采用 Swin-UNet（移窗注意力 + U-Net 跳连）训练与验证。
+  \item 以形态学和连通域过滤进行后处理，形成端到端分割流程；Foreground IoU 相比基准 UNet 提升 52.6\%，达到 0.3510。
+  \item 项目工具为 PyTorch, OpenCV，精确率达到 60.54\%，准确率达到 96.8\%。
+\end{itemize}
 
 \textbf{工具：}Python，PyTorch，MinerU，Word2Vec
 
-\ResumeItem{\textbf{基于 Swin-Unet 的无人机图像枯死树分割}}
-[项目负责人 | 新南威尔士大学 | 计算机视觉项目]
-[2025.05 -- 2025.08]
-
-\textbf{导师：}新南威尔士大学计算机科学与工程学院 Erik Meijering 博士
-
-\textbf{任务：}设计并开发不同的计算机视觉方法来分割森林航拍图像中的枯死树。
-
-\textbf{过程：}完成数据标注与切片，构建 RGB+NRG 多光谱融合管线，采用 Swin-UNet（移窗注意力 + U-Net 跳连）训练与验证，并以形态学/连通域过滤进行后处理，形成端到端分割流程。
-
-\textbf{成果：}Foreground IoU 相比基准 UNet 提升 52.6\%，达到 0.3510；精确率 60.54\%，准确率 96.8\%，展现了 SwinUNet 在林业高精度监测中的潜力。
-
-\textbf{工具：}PyTorch，OpenCV
-
 \ResumeItem{\textbf{图像处理应用研究——虹膜识别系统改进}}
-[项目负责人 | 新南威尔士大学 | 计算机视觉综合项目]
-[2025.02 -- 2025.05]
+[新南威尔士大学计算机视觉综合项目]
+[2025.02—2025.05]
+\begin{itemize}
+  \item 构建完整虹膜识别系统，对比分割、归一、编码、匹配等模块的传统方法与机器学习方法。
+  \item 分割部分对比 Canny 边缘检测、Hough 霍夫变换与 U-Net；匹配部分使用汉明距离、ResNet-50 分类网络和 Triplet 三元组网络改进匹配精度。
+  \item 提交完整技术报告，方案对比同类算法匹配准确度领先 12.3\%，提升系统在真实环境下的泛化能力。
+\end{itemize}
 
-\textbf{导师：}新南威尔士大学电气工程与电信学院 Siyuan Chen 博士
+\ResumeItem{\ResumeUrl{https://github.com/FFF108822/walkaTT}{\textbf{Walka} 基于 Gemini 的智能文化旅行规划器}}
+[Hackathon 项目，APAC Solution Challenge 2025]
+[2025.02—2025.06]
 
-\textbf{任务：}通过机器学习方法提升虹膜识别系统在瞳孔扩张与收缩等复杂情况下的性能。
+\begin{itemize}
+  \item 实现了一个基于 Gemini 2.5 Pro 的旅行规划 agent，可根据用户需求直接生成符合需求的旅行计划和行程地图。
+\end{itemize}
 
 \textbf{过程：}构建完整虹膜识别系统并在传统方法上使用机器学习加以改进。分割部分包含传统方法（Canny 边缘检测 + Hough 霍夫变换）与 U-Net 分割对比；归一部分实现多尺度半径归一化；编码部分尝试两种基于掩码的编码（一维 Log-Gabor 滤波与局部二值模式 LBP）；匹配部分使用传统方法（汉明距离）与机器学习（ResNet-50 分类网络、Triplet 三元组网络）改进系统匹配精度。
 
@@ -109,10 +123,9 @@
 
 \section{专业技能}
 \begin{itemize}
-  \item \textbf{外语水平：}英语：雅思 6.5 分，英语六级，熟练使用英语作为学术研究语言。
-  \item \textbf{编程技能：}熟练掌握 Python, SQL, C, C++, MATLAB, HTML, CSS, JavaScript, TypeScript 等编程语言。
-  \item \textbf{软件工具：}AI IDEs, n8n, PostgreSQL, MATLAB, Postman, Simulink, AutoCAD, Microsoft Office。
-  \item \textbf{兴趣爱好：}乒乓球、徒步、游泳、滑雪。
+  \item 研究方向覆盖人工智能、计算机视觉、自然语言处理和金融科技，具备从问题建模、算法实现到实验评估的完整项目经验。
+  \item 有多段项目负责人经历，能够推进数据处理、模型训练、系统实现和技术报告撰写等工作。
+  \item 兴趣爱好包括乒乓球、徒步、游泳、滑雪，具有良好的沟通能力和团队合作意识。
 \end{itemize}
 
 \end{document}
