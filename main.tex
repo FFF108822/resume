@@ -3,9 +3,8 @@
 \documentclass{resume}
 \ResumeName{田润泽}
 
-% 如果想插入照片，请使用以下两个库。
-% \usepackage{graphicx}
-% \usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{tikz}
 
 \begin{document}
 
@@ -27,9 +26,13 @@
 % \end{tikzpicture}
 
 \ResumeTitle
+\vspace{-0.8em}
+\begin{center}
+  籍贯：河北省邯郸市 \quad 出生年月：2001 年 10 月 \quad 政治面貌：共青团员
+\end{center}
+\vspace{-0.4em}
 
-
-\section{教育经历}
+\section{教育背景}
 \ResumeItem
 [澳大利亚新南威尔士大学|硕士研究生]
 {澳大利亚新南威尔士大学（University of New South Wales）}
@@ -48,14 +51,17 @@
 
 \textbf{GPA: 81.7/100}，主修课程：计算机网络（90 分）、操作系统与安全（90 分）。获学业奖学金多次，2023 年度优秀学生论文奖，第八届中国大学生“互联网+”创新创业大赛省级银奖。
 
-\section[技术能力]{技术能力\protect\footnote{与求职岗位无关的技能省略或用灰色表示。}}
+\section{学术成果}
 \begin{itemize}
   \item \textbf{语言}: 熟练掌握 Python, SQL, C, C++, MATLAB；熟悉 HTML, CSS, JavaScript, TypeScript。
   \item \textbf{工具}: PyTorch, OpenCV, PostgreSQL, Postman, Simulink, AutoCAD, Microsoft Office；熟悉 AI IDEs, n8n, MinerU, Word2Vec。
   \item \textbf{外语}: 雅思 6.5 分，英语六级，熟练使用英语作为学术研究语言。
 \end{itemize}
 
-\section{工作经历}
+\section{科研经历}
+\ResumeItem{\textbf{基于财报语义解析的企业可比性分析系统（CCF-A 区在投）}}
+[项目负责人 | Euler AI | 金融科技项目]
+[2025.06 -- 至今]
 
 \ResumeItem{Euler AI 金融科技项目}
 [项目负责人/企业可比性分析系统]
@@ -67,7 +73,12 @@
   \item 系统实现从财报文本到结构化业务信息的自动化抽取，业务标签对齐准确率达到 87\%，相较传统行业分类提升约 32\%。
 \end{itemize}
 
-\section{项目经历}
+\textbf{过程：}
+\begin{enumerate}
+  \item 利用 MinerU 实现财报文本的结构化抽取（业务结构、营收构成、经营分析、股权结构等）。
+  \item 基于 LLM 的语义解析，识别主营业务关键词与语义占比，结合上下文与财务占比生成结构化数据。
+  \item 构建标准化模块，通过关键词对齐与相似度计算（Word2Vec、Embedding、LLM 自动匹配）统一业务表达，并结合行业向量化 clustering 构建企业业务图谱。
+\end{enumerate}
 
 \ResumeItem{\textbf{基于 Swin-Unet 的无人机图像枯死树分割}}
 [新南威尔士大学计算机视觉项目]
@@ -78,6 +89,7 @@
   \item 项目工具为 PyTorch, OpenCV，精确率达到 60.54\%，准确率达到 96.8\%。
 \end{itemize}
 
+\textbf{工具：}Python，PyTorch，MinerU，Word2Vec
 
 \ResumeItem{\textbf{图像处理应用研究——虹膜识别系统改进}}
 [新南威尔士大学计算机视觉综合项目]
@@ -96,13 +108,24 @@
   \item 实现了一个基于 Gemini 2.5 Pro 的旅行规划 agent，可根据用户需求直接生成符合需求的旅行计划和行程地图。
 \end{itemize}
 
-\section{个人总结}
+\textbf{过程：}构建完整虹膜识别系统并在传统方法上使用机器学习加以改进。分割部分包含传统方法（Canny 边缘检测 + Hough 霍夫变换）与 U-Net 分割对比；归一部分实现多尺度半径归一化；编码部分尝试两种基于掩码的编码（一维 Log-Gabor 滤波与局部二值模式 LBP）；匹配部分使用传统方法（汉明距离）与机器学习（ResNet-50 分类网络、Triplet 三元组网络）改进系统匹配精度。
 
+\textbf{成果：}提交完整技术报告，提出的方案显著提升分割精度和匹配鲁棒性，对比同类算法匹配准确度领先 12.3\%，提高系统在真实环境（虹膜扩大、缩小）下的泛化能力。
+
+\textbf{工具：}MATLAB
+
+\section{项目经历}
+\ResumeItem{\textbf{Walka：基于 Gemini 的智能文化旅行规划器}}
+[\ResumeUrl{https://github.com/FFF108822/walkaTT}{github.com/FFF108822/walkaTT} | Hackathon 项目 | APAC Solution Challenge 2025]
+[2025.02 -- 2025.06]
+
+\textbf{成果：}实现了一个基于 Gemini 2.5 Pro 的旅行规划 agent，根据用户需求直接生成符合需求的旅行计划和行程地图。
+
+\section{专业技能}
 \begin{itemize}
   \item 研究方向覆盖人工智能、计算机视觉、自然语言处理和金融科技，具备从问题建模、算法实现到实验评估的完整项目经验。
   \item 有多段项目负责人经历，能够推进数据处理、模型训练、系统实现和技术报告撰写等工作。
   \item 兴趣爱好包括乒乓球、徒步、游泳、滑雪，具有良好的沟通能力和团队合作意识。
 \end{itemize}
-
 
 \end{document}
